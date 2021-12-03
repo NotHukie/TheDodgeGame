@@ -16,10 +16,9 @@ public class Reflect : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D col)
     {
-        if(col.gameObject.tag == "Obstáculo")
+        if(col.gameObject.tag == "Obstáculo" || col.gameObject.tag == "Reflected")
         {
             gameObject.SetActive(false);
-            Debug.Log("mewiwd");
         }
     }
 }

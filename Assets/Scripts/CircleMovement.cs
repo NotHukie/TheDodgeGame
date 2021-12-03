@@ -28,7 +28,7 @@ public class CircleMovement : MonoBehaviour
         {
             direction = -direction;
             gameObject.tag = "Reflected";
-            sprite.color = new Color(207, 132f, 38f, 1f);
+            sprite.color = new Color(0.81f, 0.52f, 0.15f, 1f);
         }
         if(col.gameObject.tag == "Reflected")
         {

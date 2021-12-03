@@ -9,6 +9,10 @@ public class TriangleSpawner : MonoBehaviour
 
 
     private float nextTimeToSpawn = 0f;
+    private void Start()
+    {
+        nextTimeToSpawn = Time.time + 1f / spawnRateTriangle;
+    }
 
     void Update()
     {
