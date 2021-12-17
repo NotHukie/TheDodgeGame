@@ -13,30 +13,42 @@ public class PlayerMovement : MonoBehaviour
     private float startingHealth = 3;
     private float currentHealth;
     SpriteRenderer sprite;
+    private bool canDash;
+    Animator anim;
     void Start()
     {
         sprite = GetComponent<SpriteRenderer>();
+        anim = GetComponent<Animator>();
         isDashing = false;
         canDie = true;
+        canDash = true;
         currentHealth = startingHealth;
+        Score.instance.scoreAmount = 0;
+        Score.instance.isRunning = true;
     }
     void Update()
     {
         movement.x = Input.GetAxis("Horizontal");
         movement.y = Input.GetAxis("Vertical");
+        Vector3 vec = new Vector3(movement.x, movement.y, 0f);
+        transform.right = vec;
+
         if(movement.magnitude > 1)
         {
             movement = movement.normalized;
         }
         rb.velocity = movement * movementSpeed;
         
-        if(Input.GetKeyDown("space") && !isDashing)
+        if(Input.GetKeyDown("space") && canDash)
         {
             isDashing = true;
             canDie = false;
+            canDash = false;
             movementSpeed = 60f;
             Invoke("Dash", 1f);
             Invoke("DashExit", .1f);
+            Invoke("RecoverDash", 4f);
+            anim.SetTrigger("canDash");
         }
         if(Input.GetKeyDown(KeyCode.LeftShift))
         {
@@ -76,6 +88,10 @@ public class PlayerMovement : MonoBehaviour
     {
         movementSpeed = 10f;
     }
+    void RecoverDash()
+    {
+        canDash = true;
+    }
     public void TakeDamage(float damage)
     {
         currentHealth = Mathf.Clamp(currentHealth - damage, 0, startingHealth);
@@ -95,6 +111,7 @@ public class PlayerMovement : MonoBehaviour
         {
             Destroy(gameObject);
             SceneManager.LoadScene(6);
+            Score.instance.isRunning = false;
         }
     }
 }

@@ -3,11 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ShowScore : MonoBehaviour
+public class ScoreText : MonoBehaviour
 {
     public Text scoreText;
 
-    private void Start()
+    void Start()
+    {
+        
+    }
+
+    // Update is called once per frame
+    void Update()
     {
         scoreText.text = "Score " + (int)Score.instance.scoreAmount;
     }
