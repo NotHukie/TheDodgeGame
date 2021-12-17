@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovementLevel : MonoBehaviour
 {
@@ -46,11 +47,12 @@ public class PlayerMovementLevel : MonoBehaviour
 
         void OnTriggerEnter2D(Collider2D col)
         {
-            if (col.gameObject.tag == "Obst·culo")
+            if (col.gameObject.tag == "Obst√°culo")
             {
                 if (canDie == true)
                 {
                     Destroy(gameObject);
+                    SceneManager.LoadScene(8);
                 }
             }
             if (col.gameObject.tag == "Circle")
@@ -58,6 +60,7 @@ public class PlayerMovementLevel : MonoBehaviour
                 if (canDie == true)
                 {
                     Destroy(gameObject);
+                    SceneManager.LoadScene(8);
                 }
             }
 

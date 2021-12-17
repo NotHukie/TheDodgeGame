@@ -15,6 +15,21 @@ EditorBuildSettings:
     path: Assets/Scenes/MenuOptions.unity
     guid: e2b225de4ab31864e8e4c1aee07dd2ac
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
+    path: Assets/Scenes/Survive.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/Level1.unity
+    guid: 447f7a4a2ffac364295657d3bfded8f3
+  - enabled: 1
+    path: Assets/Scenes/MenuLevel.unity
+    guid: a43ea933248ac1d42a1e177cf136ea10
+  - enabled: 1
+    path: Assets/Scenes/GameOverSurvive.unity
+    guid: 29acd62dec1610044b343ad8bddca6c0
+  - enabled: 1
+    path: Assets/Scenes/LevelCompleted.unity
+    guid: a5325d67d4589384ba3fecd076368ccf
+  - enabled: 1
+    path: Assets/Scenes/GameOverLevel.unity
+    guid: 0e0974d7b91e7a34ba458f81b1194f19
   m_configObjects: {}

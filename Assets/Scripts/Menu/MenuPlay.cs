@@ -7,14 +7,15 @@ public class MenuPlay : MonoBehaviour
 {
     public void PlaySurvive()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
+        SceneManager.LoadScene(3);
     }
-    
-    void Update()
+    public void PlayLevel()
     {
-        if(Input.GetKeyDown(KeyCode.Escape))
-        {
-            SceneManager.LoadScene(0);
-        }
+        SceneManager.LoadScene(5);
+    }
+
+    public void Back()
+    {
+        SceneManager.LoadScene(0);
     }
 }
