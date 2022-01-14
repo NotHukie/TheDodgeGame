@@ -8,7 +8,7 @@ public class SpawnerPentagon : MonoBehaviour
     public GameObject PentagonPrefab;
 
 
-    private float nextTimeToSpawn = 0f;
+    private float nextTimeToSpawn = 20f;
 
     void Update()
     {

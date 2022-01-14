@@ -7,35 +7,35 @@ public class MenuLevel : MonoBehaviour
 {
     public void PlayLevel1()
     {
-        SceneManager.LoadScene(4);
+        SceneManager.LoadScene(9);
     }
     public void PlayLevel2()
     {
-        Debug.Log("Load Level 2");
+        SceneManager.LoadScene(4);
     }
     public void PlayLevel3()
     {
-        Debug.Log("Load Level 3");
+        SceneManager.LoadScene(10);
     }
     public void PlayLevel4()
     {
-        Debug.Log("Load Level 4");
+        SceneManager.LoadScene(11);
     }
     public void PlayLevel5()
     {
-        Debug.Log("Load Level 5");
+        SceneManager.LoadScene(12);
     }
     public void PlayLevel6()
     {
-        Debug.Log("Load Level 6");
+        SceneManager.LoadScene(13);
     }
     public void PlayLevel7()
     {
-        Debug.Log("Load Level 7");
+        SceneManager.LoadScene(14);
     }
     public void PlayLevel8()
     {
-        Debug.Log("Load Level 8");
+        SceneManager.LoadScene(15);
     }
     public void BackMenu()
     {

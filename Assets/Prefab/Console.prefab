@@ -1,0 +1,92 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8460931932965429020
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8460931932965429022}
+  - component: {fileID: 8460931932965429021}
+  - component: {fileID: 8460931932965429217}
+  - component: {fileID: 8460931932965429216}
+  - component: {fileID: 8460931932965429023}
+  m_Layer: 0
+  m_Name: Console
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8460931932965429022
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8460931932965429020}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8460931932965429021
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8460931932965429020}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd8958618b02d3344beb82e49a2f89fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnRateRectangle: 2
+  RectanglePrefab: {fileID: 7348513084577850394, guid: 04efacc7bb63cc746bc06b136ede11ca, type: 3}
+--- !u!114 &8460931932965429217
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8460931932965429020}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f2efdfd2c9ab4e40a74b2c3502c3f90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnRateTriangle: 0.1
+  TrianglePrefab: {fileID: 8407274198918163685, guid: 87fde53508d78bb41866e1f7631b3ec7, type: 3}
+--- !u!114 &8460931932965429216
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8460931932965429020}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a53a536daead1894189eb8643ad9bf74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnRatePentagon: 0.25
+  PentagonPrefab: {fileID: 4741719234875254829, guid: 455b5fde2490fcf48ab988dd1ae8aa8b, type: 3}
+--- !u!114 &8460931932965429023
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8460931932965429020}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b9f5f2f6201f6d4cbfdd18fe65b9653, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnRateQuad: 0.08
+  QuadPrefab: {fileID: 7068216094981267890, guid: 253468c26c3e0234a90d4aebd49f0881, type: 3}

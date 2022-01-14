@@ -10,6 +10,7 @@ TagManager:
   - Circle
   - Reflection
   - Reflected
+  - ReflectItem
   layers:
   - Default
   - TransparentFX

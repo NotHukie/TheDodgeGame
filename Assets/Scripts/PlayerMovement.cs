@@ -15,6 +15,8 @@ public class PlayerMovement : MonoBehaviour
     SpriteRenderer sprite;
     private bool canDash;
     Animator anim;
+    public bool canReflect;
+    public GameObject Damage;
     void Start()
     {
         sprite = GetComponent<SpriteRenderer>();
@@ -22,6 +24,7 @@ public class PlayerMovement : MonoBehaviour
         isDashing = false;
         canDie = true;
         canDash = true;
+        canReflect = false;
         currentHealth = startingHealth;
         Score.instance.scoreAmount = 0;
         Score.instance.isRunning = true;
@@ -50,9 +53,11 @@ public class PlayerMovement : MonoBehaviour
             Invoke("RecoverDash", 4f);
             anim.SetTrigger("canDash");
         }
-        if(Input.GetKeyDown(KeyCode.LeftShift))
+        if(Input.GetKeyDown(KeyCode.LeftShift) && canReflect)
         {
             transform.GetChild(0).gameObject.SetActive(true);
+            //SetActive Indicador Reflect = false;
+            canReflect = false;
         }
     }
 
@@ -63,6 +68,10 @@ public class PlayerMovement : MonoBehaviour
             if(canDie == true)
             {
                 TakeDamage(1);
+                canDie = false;
+                Invoke("Dash" ,1f);
+                Damage.SetActive(true);
+                Invoke("DisableDamage", 0.2f);
             }
         }
         if(col.gameObject.tag == "Circle")
@@ -70,6 +79,10 @@ public class PlayerMovement : MonoBehaviour
             if(canDie == true)
             {
                 TakeDamage(1);
+                canDie = false;
+                Invoke("Dash" ,1f);
+                Damage.SetActive(true);
+                Invoke("DisableDamage", 0.2f);
             }
         }
 
@@ -77,7 +90,16 @@ public class PlayerMovement : MonoBehaviour
         {
             TakeDamage(-1);
         }
+        if(col.gameObject.tag == "ReflectItem")
+        {
+            canReflect = true;
+            //SetActive Indicador Reflect 
+        }
         
+    }
+    void DisableDamage()
+    {
+        Damage.SetActive(false);
     }
     void Dash()
     {
@@ -95,17 +117,17 @@ public class PlayerMovement : MonoBehaviour
     public void TakeDamage(float damage)
     {
         currentHealth = Mathf.Clamp(currentHealth - damage, 0, startingHealth);
-        if(currentHealth > 2.5f)
+        if(currentHealth > 2.5)
         {
             sprite.color = new Color(sprite.color.r, sprite.color.g, sprite.color.b, 1f);
         }
         else if(currentHealth > 1.5f)
         {
-            sprite.color = new Color(sprite.color.r, sprite.color.g, sprite.color.b, .6f);
+            sprite.color = new Color(sprite.color.r, sprite.color.g, sprite.color.b, 0.6f);
         }
         else if(currentHealth > 0.5f)
         {
-            sprite.color = new Color(sprite.color.r, sprite.color.g, sprite.color.b, .3f);
+            sprite.color = new Color(sprite.color.r, sprite.color.g, sprite.color.b, 0.3f);
         }
         else if(currentHealth <= 0)
         {

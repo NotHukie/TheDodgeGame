@@ -8,11 +8,7 @@ public class QuadSpawner : MonoBehaviour
     public GameObject QuadPrefab;
 
 
-    private float nextTimeToSpawn = 0f;
-    private void Start()
-    {
-        nextTimeToSpawn = Time.time + 1f / spawnRateQuad;
-    }
+    private float nextTimeToSpawn = 60f;
 
     void Update()
     {

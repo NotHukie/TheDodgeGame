@@ -7,12 +7,7 @@ public class TriangleSpawner : MonoBehaviour
     public float spawnRateTriangle;
     public GameObject TrianglePrefab;
 
-
-    private float nextTimeToSpawn = 0f;
-    private void Start()
-    {
-        nextTimeToSpawn = Time.time + 1f / spawnRateTriangle;
-    }
+    private float nextTimeToSpawn = 40f;
 
     void Update()
     {
@@ -23,4 +18,3 @@ public class TriangleSpawner : MonoBehaviour
         }
     }
 }
-
