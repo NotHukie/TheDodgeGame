@@ -8,16 +8,6 @@ public class SpawnerRectangles : MonoBehaviour
     public GameObject RectanglePrefab;
     private float nextTimeToSpawn = 0f;
     
-    void Start()
-    {
-        StartCoroutine(SpawnReta());
-    }
-
-    IEnumerator SpawnReta()
-    {
-        yield return new WaitForSeconds(10);
-        Update();
-    }
     void Update()
     {
         if(Time.time >= nextTimeToSpawn && Score.instance.isRunning)

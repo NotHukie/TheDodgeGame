@@ -6,13 +6,19 @@ public class SpawnerPentagon : MonoBehaviour
 {
     public float spawnRatePentagon;
     public GameObject PentagonPrefab;
-
-
-    private float nextTimeToSpawn = 20f;
+    public static int timer;
+    private float nextTimeToSpawn = 0f;
+    
+    void Start()
+    {
+        timer = 0;
+    }
 
     void Update()
     {
-        if(Time.time >= nextTimeToSpawn)
+        timer ++;
+
+        if(Time.time >= nextTimeToSpawn && timer > 14200)
         {
             Instantiate(PentagonPrefab, Vector3.zero, Quaternion.identity);
             nextTimeToSpawn = Time.time + 1f / spawnRatePentagon;

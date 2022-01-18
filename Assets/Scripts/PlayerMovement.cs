@@ -13,7 +13,7 @@ public class PlayerMovement : MonoBehaviour
     private float startingHealth = 3;
     private float currentHealth;
     SpriteRenderer sprite;
-    private bool canDash;
+    public static bool canDash;
     Animator anim;
     public bool canReflect;
     public GameObject Damage;
