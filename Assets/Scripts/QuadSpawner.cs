@@ -12,7 +12,7 @@ public class QuadSpawner : MonoBehaviour
 
     void Update()
     {
-        if (Time.time >= nextTimeToSpawn && SpawnerPentagon.timer > 42600)
+        if (Time.time >= nextTimeToSpawn && SpawnerPentagon.timer > 60)
         {
             Instantiate(QuadPrefab, Vector3.zero, Quaternion.identity);
             nextTimeToSpawn = Time.time + 1f / spawnRateQuad;

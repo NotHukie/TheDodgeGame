@@ -17,6 +17,7 @@ public class PlayerMovement : MonoBehaviour
     Animator anim;
     public bool canReflect;
     public GameObject Damage;
+    public GameObject IndicadorReflect;
     void Start()
     {
         sprite = GetComponent<SpriteRenderer>();
@@ -56,8 +57,8 @@ public class PlayerMovement : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.LeftShift) && canReflect)
         {
             transform.GetChild(0).gameObject.SetActive(true);
-            //SetActive Indicador Reflect = false;
             canReflect = false;
+            IndicadorReflect.SetActive(false);
         }
     }
 
@@ -93,7 +94,7 @@ public class PlayerMovement : MonoBehaviour
         if(col.gameObject.tag == "ReflectItem")
         {
             canReflect = true;
-            //SetActive Indicador Reflect 
+            IndicadorReflect.SetActive(true);
         }
         
     }
