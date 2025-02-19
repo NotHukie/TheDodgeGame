@@ -6,6 +6,6 @@ public class BugFix : MonoBehaviour
 {
 void Start()
 {
-    Score.instance.isRunning = false;
+    
 }
 }

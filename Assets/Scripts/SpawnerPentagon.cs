@@ -19,10 +19,25 @@ public class SpawnerPentagon : MonoBehaviour
     {
         timer += secondsIncreasedPerFrame * Time.deltaTime;
 
-        if(Time.time >= nextTimeToSpawn && timer > 20)
+        if(Time.time >= nextTimeToSpawn && timer > 16f)
         {
             Instantiate(PentagonPrefab, Vector3.zero, Quaternion.identity);
             nextTimeToSpawn = Time.time + 1f / spawnRatePentagon;
+        }
+
+        if (timer > 19.5f)
+        {
+            spawnRatePentagon = 0.125f;
+        }
+        
+        if (timer > 23f)
+        {
+            spawnRatePentagon = 0.25f;
+        }
+
+        if (timer > 93f)
+        {
+            spawnRatePentagon = 0f;
         }
     }
 }

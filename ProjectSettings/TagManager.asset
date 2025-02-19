@@ -11,6 +11,11 @@ TagManager:
   - Reflection
   - Reflected
   - ReflectItem
+  - Audio
+  - DoNotDestroy
+  - Enemy
+  - EnemyD
+  - Heal
   layers:
   - Default
   - TransparentFX

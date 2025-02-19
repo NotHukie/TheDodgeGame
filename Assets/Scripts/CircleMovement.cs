@@ -1,15 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CircleMovement : MonoBehaviour
 {
     public int speed;
     public Rigidbody2D rb;
     public Vector3 direction;
+    public Vector3 rotation;
     protected Vector3 destination;
     SpriteRenderer sprite;
-
 
     void Start()
     {
@@ -21,7 +22,10 @@ public class CircleMovement : MonoBehaviour
     void FixedUpdate()
     {
         rb.velocity = direction.normalized * speed;
+        this.transform.Rotate(rotation * 1 * Time.deltaTime);
     }
+
+
     void OnTriggerEnter2D(Collider2D col)
     {
         if(col.gameObject.tag == "Reflection")

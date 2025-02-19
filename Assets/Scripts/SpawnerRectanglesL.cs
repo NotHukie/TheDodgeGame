@@ -8,6 +8,8 @@ public class SpawnerRectanglesL : MonoBehaviour
     public GameObject RectanglePrefab;
     private float nextTimeToSpawn = 0f;
     
+
+
     void Update()
     {
         if(Time.time >= nextTimeToSpawn)

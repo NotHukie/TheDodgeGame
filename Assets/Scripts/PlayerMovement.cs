@@ -18,6 +18,11 @@ public class PlayerMovement : MonoBehaviour
     public bool canReflect;
     public GameObject Damage;
     public GameObject IndicadorReflect;
+
+    public GameObject pauseMenu;
+    public bool isPaused;
+
+    public AudioSource music;
     void Start()
     {
         sprite = GetComponent<SpriteRenderer>();
@@ -27,8 +32,7 @@ public class PlayerMovement : MonoBehaviour
         canDash = true;
         canReflect = false;
         currentHealth = startingHealth;
-        Score.instance.scoreAmount = 0;
-        Score.instance.isRunning = true;
+        isPaused = false;
     }
     void Update()
     {
@@ -42,7 +46,11 @@ public class PlayerMovement : MonoBehaviour
             movement = movement.normalized;
         }
         rb.velocity = movement * movementSpeed;
-        
+
+        if(SpawnerPentagon.timer > 171f)
+        {
+            rb.gravityScale = 10f;
+        }
         if(Input.GetKeyDown("space") && canDash)
         {
             isDashing = true;
@@ -51,7 +59,7 @@ public class PlayerMovement : MonoBehaviour
             movementSpeed = 60f;
             Invoke("Dash", 1f);
             Invoke("DashExit", .1f);
-            Invoke("RecoverDash", 4f);
+            Invoke("RecoverDash", 3f);
             anim.SetTrigger("canDash");
         }
         if(Input.GetKeyDown(KeyCode.LeftShift) && canReflect)
@@ -59,6 +67,17 @@ public class PlayerMovement : MonoBehaviour
             transform.GetChild(0).gameObject.SetActive(true);
             canReflect = false;
             IndicadorReflect.SetActive(false);
+        }
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (isPaused)
+            {
+                UnPause();
+            }
+            else
+            {
+                Pause();
+            }
         }
     }
 
@@ -98,6 +117,21 @@ public class PlayerMovement : MonoBehaviour
         }
         
     }
+
+    void Pause()
+    {
+        pauseMenu.SetActive(true);
+        Time.timeScale = 0f;
+        isPaused = true;
+        music.Pause();
+    }
+    void UnPause()
+    {
+        pauseMenu.SetActive(false);
+        Time.timeScale = 1f;
+        isPaused = false;
+        music.UnPause();
+    }
     void DisableDamage()
     {
         Damage.SetActive(false);
@@ -133,8 +167,8 @@ public class PlayerMovement : MonoBehaviour
         else if(currentHealth <= 0)
         {
             Destroy(gameObject);
-            SceneManager.LoadScene(6);
-            Score.instance.isRunning = false;
+            SceneManager.LoadScene(2);
+            music.volume = 0.01f;
         }
     }
 }

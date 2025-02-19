@@ -1,14 +1,21 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class ShowScore : MonoBehaviour
 {
     public Text scoreText;
-
-    private void Start()
+    public Text highScoreText;
+    void Start()
     {
-        scoreText.text = "Score " + (int)Score.instance.scoreAmount;
+        scoreText.text = "Score " + (int)ScoreManager.instance.score;
+        highScoreText.text = "Highscore " + (int)ScoreManager.instance.highscore;
+
+    }
+    private void Update()
+    {
+        if ((int)ScoreManager.instance.score > (int)ScoreManager.instance.highscore)
+        {
+            highScoreText.text = "Highscore " + (int)ScoreManager.instance.score;
+        }
     }
 }

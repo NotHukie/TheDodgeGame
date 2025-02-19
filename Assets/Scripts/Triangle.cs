@@ -20,9 +20,13 @@ public class Triangle : MonoBehaviour
         {
             decreasing = false;
         }
+        
+        if (transform.localScale.x >= 20f && !decreasing)
+        {
+            Destroy(gameObject);
+        }
 
-
-        if(decreasing)
+        if (decreasing)
         {
             transform.localScale -= Vector3.one * speed * Time.deltaTime;
         }

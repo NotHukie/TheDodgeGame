@@ -12,10 +12,15 @@ public class TriangleSpawner : MonoBehaviour
 
     void Update()
     {
-        if(Time.time >= nextTimeToSpawn && SpawnerPentagon.timer > 37)
+        if(Time.time >= nextTimeToSpawn && SpawnerPentagon.timer > 24f)
         {
             Instantiate(TrianglePrefab, Vector3.zero, Quaternion.identity);
             nextTimeToSpawn = Time.time + 1f / spawnRateTriangle;
+        }
+
+        if (SpawnerPentagon.timer > 55f)
+        {
+            spawnRateTriangle = 0f;
         }
     }
 }

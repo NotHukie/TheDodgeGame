@@ -15,11 +15,11 @@ public class CuraSpawner : MonoBehaviour
     {
         if(Time.time >= nextTimeToSpawn)
         {
-            if (Score.instance.isRunning)
             {
-                Instantiate(healPrefab[0], new Vector3(Random.Range(-8, 8), Random.Range(-4, 4), 0), transform.rotation);
+                Instantiate(healPrefab[0], new Vector3(Random.Range(-8, 8), Random.Range(-2, 4), 0), transform.rotation);
                 nextTimeToSpawn = Time.time + 1f / spawnRateHeal;
             }
         }
     }
+
 }

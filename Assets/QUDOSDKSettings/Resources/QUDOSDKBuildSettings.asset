@@ -1,0 +1,10 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!49 &4900000
+TextAsset:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: QUDOSDKBuildSettings
+  m_Script: eyJHYW1lIjp7IkFwcE5hbWUiOiJkb2RnZWdhbWUiLCJBcHBJRCI6ImY2ZjdlZThiLTdlZTktNDg3OC05MGZjLTA4MzhjNDc3MWI5NiIsIkFwcEhhc2giOiJmMDUwYjYwNzU4ZGFlYmJjM2I4ODU0NTU0YmZhYzUxZGQ2MTgyNzlmOTQ5NGU0MWJhNDgyZDU1Y2RhOTI4Y2VlIiwiVXNlQnVnQnV0dG9uIjpmYWxzZSwiQ3VycmVudExheW91dCI6MX0sIlNlbGVjdGVkRW52IjowLCJDdXN0b21Eb21haW4iOm51bGwsIklzU2VjdXJlQ29ubmVjdGlvbiI6ZmFsc2UsIlNES0hhc2giOiJhZWRkNGE3YjNiYzQ0NWY5MzNlMmExNmIyZGNlZjAzNWNjNTFmZWE1Y2RhNTFhNWU3NzYwNjU1Y2M4MWU0OGRjIiwiTGFzdFNhdmVWZXJzaW9uIjoiMC45LjQifQ==

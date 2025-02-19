@@ -1,0 +1,84 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &607555888467066793
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1240683687791649662}
+  - component: {fileID: 7107313617774383134}
+  m_Layer: 0
+  m_Name: Console
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1240683687791649662
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 607555888467066793}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7107313617774383134
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 607555888467066793}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e897fff2b66d323478358ab99c51926c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnPointsCircle:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  circlePrefab: {fileID: 7914981600792564605, guid: 723bc13f72ee2684bb620a5802df3786, type: 3}
+  isCircleSpawning: 0
+  spawnRateCircle: 1.3
+  BlockPrefab: {fileID: 7348513084577850394, guid: 87d135c5b77658a459f85f871bd5724b, type: 3}
+  isBlockSpawning: 0
+  spawnRateBlock: 2
+  hexPrefab: {fileID: 4741719234875254829, guid: ccce35ef3b255f542b7f393c0ff95696, type: 3}
+  isHexSpawning: 0
+  spawnRateHex: 0.5
+  TriPrefab: {fileID: 8407274198918163685, guid: 822d639debcd73f40b7d47993af16e22, type: 3}
+  isTriSpawning: 0
+  spawnRateTri: 0.4
+  QuadPrefab: {fileID: 7068216094981267890, guid: 5c076d682a6fe0c4cbe2f32c3882911c, type: 3}
+  isQuadSpawning: 0
+  spawnRateQuad: 0.3
+  timer: 0
+  secondsIncreasedPerFrame: 1

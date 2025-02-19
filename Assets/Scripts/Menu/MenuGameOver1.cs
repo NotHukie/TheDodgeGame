@@ -15,11 +15,13 @@ public class MenuGameOver1 : MonoBehaviour
     }
         public void RetryLevel2()
     {
-        SceneManager.LoadScene(4);
+        SceneManager.LoadScene(3);
+        Destroy(GameObject.FindWithTag("Audio"));
     }
         public void RetryLevel3()
     {
-        SceneManager.LoadScene(10);
+        SceneManager.LoadScene(5);
+        Destroy(GameObject.FindWithTag("Audio"));
     }
         public void RetryLevel4()
     {
@@ -44,5 +46,6 @@ public class MenuGameOver1 : MonoBehaviour
     public void Home()
     {
         SceneManager.LoadScene(0);
+        Destroy(GameObject.FindWithTag("Audio"));
     }
 }
