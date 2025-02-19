@@ -3,34 +3,34 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class TestZoneConsole : MonoBehaviour
+public class SurviveConsole : MonoBehaviour
 {
-    [Header("CIRCLE")]
+    [Header("Circle")]
     public Transform[] spawnPointsCircle;
     public GameObject circlePrefab;
     private float nextTimeToSpawnCircle = 0f;
     [SerializeField] private bool isCircleSpawning;
     [SerializeField] private float spawnRateCircle;
 
-    [Header("BLOCK")]
+    [Header("Block")]
     public GameObject BlockPrefab;
     private float nextTimeToSpawnBlock = 0f;
     [SerializeField] private bool isBlockSpawning;
     [SerializeField] private float spawnRateBlock;
 
-    [Header("HEX")]
+    [Header("Hex")]
     public GameObject hexPrefab;
     private float nextTimeToSpawnHex = 0f;
     [SerializeField] private bool isHexSpawning;
     [SerializeField] private float spawnRateHex;
 
-    [Header("TRI")]
+    [Header("Tri")]
     public GameObject TriPrefab;
     private float nextTimeToSpawnTri = 0f;
     [SerializeField] private bool isTriSpawning;
     [SerializeField] private float spawnRateTri;
 
-    [Header("QUAD")]
+    [Header("Quad")]
     public GameObject QuadPrefab;
     private float nextTimeToSpawnQuad = 0f;
     [SerializeField] private bool isQuadSpawning;
