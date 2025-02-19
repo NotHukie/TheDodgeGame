@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class TestZoneConsole : MonoBehaviour
+public class Level1Console : MonoBehaviour
 {
     [Header("CIRCLE")]
     public Transform[] spawnPointsCircle;

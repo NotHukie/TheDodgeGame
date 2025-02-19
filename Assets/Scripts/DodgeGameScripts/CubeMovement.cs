@@ -7,6 +7,12 @@ public class CubeMovement : MonoBehaviour
 {
     public static CubeMovement instance;
 
+    [Header("DASH")] //Dash
+    private bool canDash = true;
+    [SerializeField] private float dashingPower = 3f;
+    [SerializeField] private float dashingTime = 0.2f;
+    [SerializeField] private float dashingCooldown = 0f;
+
     Vector2 movement;
 
     SpriteRenderer sprite;
@@ -25,11 +31,6 @@ public class CubeMovement : MonoBehaviour
     private float startingHealth = 3f;
     private float currentHealth;
 
-    //Dash
-    private bool canDash = true;
-    private float dashingPower = 3f;
-    private float dashingTime = 0.2f;
-    private float dashingCooldown = 0f;
 
     void Start()
     {
@@ -85,6 +86,7 @@ public class CubeMovement : MonoBehaviour
         yield return new WaitForSeconds(dashingTime);
         movementSpeed = movementSpeed / dashingPower;
         trail.emitting = false;
+        yield return new WaitForSeconds(0.5f);
         canBeHitten = true;
         yield return new WaitForSeconds(dashingCooldown);
         canDash = true;
