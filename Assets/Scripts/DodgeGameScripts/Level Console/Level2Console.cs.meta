@@ -3,7 +3,12 @@ guid: 2e88bb047f9aa014e910327fca4b1b54
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - circlePrefab: {instanceID: 0}
+  - BlockPrefab: {instanceID: 0}
+  - hexPrefab: {instanceID: 0}
+  - TriPrefab: {instanceID: 0}
+  - QuadPrefab: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

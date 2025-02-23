@@ -123,18 +123,7 @@ public class Level2Console : MonoBehaviour
 
     private IEnumerator LevelManager() // LEVEL TIMING MANAGER //
     {
-        isCircleSpawning = true;
-        isBlockSpawning = true;
         yield return new WaitForSeconds(10f);
-        isCircleSpawning = false;
-        isHexSpawning = true;
-        yield return new WaitForSeconds(10f);
-        isBlockSpawning = false;
-        isTriSpawning = true;
-        yield return new WaitForSeconds(10f);
-        isHexSpawning = false;
-        isQuadSpawning = true;
-
     }
 
 
