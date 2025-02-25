@@ -123,7 +123,7 @@ public class TestZoneConsole : MonoBehaviour
 
     private IEnumerator LevelManager() // LEVEL TIMING MANAGER //
     {
-        isCircleSpawning = true;
+        /*isCircleSpawning = true;
         isBlockSpawning = true;
         yield return new WaitForSeconds(10f);
         isCircleSpawning = false;
@@ -133,8 +133,8 @@ public class TestZoneConsole : MonoBehaviour
         isTriSpawning = true;
         yield return new WaitForSeconds(10f);
         isHexSpawning = false;
-        isQuadSpawning = true;
-
+        isQuadSpawning = true;*/
+        yield return null;
     }
 
 

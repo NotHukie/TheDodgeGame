@@ -7,21 +7,21 @@ public class CubeMovement : MonoBehaviour
 {
     public static CubeMovement instance;
 
-    [Header("DASH")] //Dash
+    [Header("DASH")] //DASH
     private bool canDash = true;
     [SerializeField] private float dashingPower = 3f;
     [SerializeField] private float dashingTime = 0.2f;
-    [SerializeField] private float dashingCooldown = 0f;
-
+    [SerializeField] private float dashingCooldown;
+    public GameObject Blink;
+    
     Vector2 movement;
 
     SpriteRenderer sprite;
     
-
     //Publics
     public Rigidbody2D rb;
     public BoxCollider2D PlayerCollider;
-    public Animator animator;
+    public Animator playerAnimator;
     public TrailRenderer trail;
     public GameObject damage;
 
@@ -36,6 +36,7 @@ public class CubeMovement : MonoBehaviour
     {
         sprite = GetComponent<SpriteRenderer>();
         currentHealth = startingHealth;
+        Blink.SetActive(false);
     }
     void Update()
     {
@@ -78,7 +79,7 @@ public class CubeMovement : MonoBehaviour
 
     private IEnumerator Dash()
     {
-        animator.SetTrigger("isDashing");
+        playerAnimator.SetTrigger("isDashing");
         canDash = false;
         canBeHitten = false;
         movementSpeed = movementSpeed * dashingPower;
@@ -90,6 +91,9 @@ public class CubeMovement : MonoBehaviour
         canBeHitten = true;
         yield return new WaitForSeconds(dashingCooldown);
         canDash = true;
+        Blink.SetActive(true);
+        yield return new WaitForSeconds(0.15f);
+        Blink.SetActive(false);
     }
     public void TakeDamage(float damage)
     {
